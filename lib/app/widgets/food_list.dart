@@ -15,21 +15,22 @@ class FoodList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      padding: EdgeInsets.symmetric(vertical: 30),
+      padding: const EdgeInsets.symmetric(vertical: 30),
       child: ListView.separated(
-          padding: EdgeInsets.symmetric(horizontal: 25),
+          padding: const EdgeInsets.symmetric(horizontal: 25),
           scrollDirection: Axis.horizontal,
+          physics: const BouncingScrollPhysics(),
           itemBuilder: (context, index) => GestureDetector(
                 onTap: () => callback(index),
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 14),
+                  padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 14),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: slected == index ? kprimaryColor : Colors.white),
                   child: Text(menu[index]),
                 ),
               ),
-          separatorBuilder: (_,index)=> SizedBox(width: 20,),
+          separatorBuilder: (_,index)=> const SizedBox(width: 20,),
           itemCount: menu.length),
     );
   }

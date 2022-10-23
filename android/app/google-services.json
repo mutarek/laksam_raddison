@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "46847318119",
+    "project_id": "laksam-radisson",
+    "storage_bucket": "laksam-radisson.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46847318119:android:91645188230557b5e6dcc2",
+        "android_client_info": {
+          "package_name": "com.dhakacity.laksam_raddison"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46847318119-sjhipah5nv5a98s8p0m0ai1kqdm85787.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTmgvvBDX8-irrfR-vsgCbWeTutODDbX0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46847318119-sjhipah5nv5a98s8p0m0ai1kqdm85787.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

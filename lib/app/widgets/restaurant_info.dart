@@ -1,10 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:laksam_raddison/app/models/restaurant_model.dart';
 
 import '../constant/colors.dart';
 import '../static/dummy_string.dart';
 
 class RestaurantInfo extends StatelessWidget {
+  final Restaurant restaurant;
+
+
+  RestaurantInfo(this.restaurant);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,14 +25,14 @@ class RestaurantInfo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    DummyString().restaurantName,
+                    restaurant.name.toString(),
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Text(
-                    DummyString().restaurantAddress,
+                    restaurant.address.toString(),
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -36,7 +42,7 @@ class RestaurantInfo extends StatelessWidget {
               ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(50),
-                child: Image.network(DummyString().restaurantLogo,width: 80,scale: 1.0,),
+                child: Image.network(restaurant.logo.toString(),width: 80,scale: 1.0,),
               )
             ],
           ),
@@ -44,13 +50,13 @@ class RestaurantInfo extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('"${DummyString().restaurantDesc}"',style: TextStyle(fontSize: 16),),
+              Text('"${restaurant.desc}"',style: TextStyle(fontSize: 16),),
               Row(
                 children: [
                   Icon(Icons.star_outline,
                     color: kprimaryColor,
                   ),
-                  Text(DummyString().restaurantRating,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                  Text(restaurant.rating.toString(),style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
                   SizedBox(width: 10,)
                 ],
               )
